@@ -1,0 +1,84 @@
+﻿<Window x:Class="NotePad.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Bloco de Notas Avançado" Height="600" Width="800"
+        WindowStartupLocation="CenterScreen">
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.New" Executed="NewCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Open" Executed="OpenCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="SaveCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.SaveAs" Executed="SaveAsCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Cut" Executed="CutCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Copy" Executed="CopyCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Paste" Executed="PasteCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.SelectAll" Executed="SelectAllCommand_Executed"/>
+        <CommandBinding Command="ApplicationCommands.Find" Executed="FindCommand_Executed"/>
+    </Window.CommandBindings>
+    
+    <DockPanel>
+        <!-- Menu Superior -->
+        <Menu DockPanel.Dock="Top" Background="#F0F0F0">
+            <MenuItem Header="_Arquivo">
+                <MenuItem Header="_Novo" Command="ApplicationCommands.New" InputGestureText="Ctrl+N"/>
+                <MenuItem Header="_Abrir..." Command="ApplicationCommands.Open" InputGestureText="Ctrl+O"/>
+                <Separator/>
+                <MenuItem Header="_Salvar" Command="ApplicationCommands.Save" InputGestureText="Ctrl+S"/>
+                <MenuItem Header="Salvar _Como..." Command="ApplicationCommands.SaveAs" InputGestureText="Ctrl+Shift+S"/>
+                <Separator/>
+                <MenuItem Header="Sai_r" Click="ExitMenuItem_Click" InputGestureText="Alt+F4"/>
+            </MenuItem>
+            <MenuItem Header="_Editar">
+                <MenuItem Header="_Recortar" Command="ApplicationCommands.Cut" InputGestureText="Ctrl+X"/>
+                <MenuItem Header="_Copiar" Command="ApplicationCommands.Copy" InputGestureText="Ctrl+C"/>
+                <MenuItem Header="Co_lar" Command="ApplicationCommands.Paste" InputGestureText="Ctrl+V"/>
+                <Separator/>
+                <MenuItem Header="_Selecionar Tudo" Command="ApplicationCommands.SelectAll" InputGestureText="Ctrl+A"/>
+                <Separator/>
+                <MenuItem Header="_Localizar..." Command="ApplicationCommands.Find" InputGestureText="Ctrl+F"/>
+            </MenuItem>
+            <MenuItem Header="_Exibir">
+                <MenuItem Header="_Barra de Status" IsChecked="True" Click="StatusBarMenuItem_Click"/>
+                <MenuItem Header="_Salvamento Automático" IsChecked="True" Click="AutoSaveMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        
+        <!-- Barra de Status -->
+        <StatusBar x:Name="statusBar" DockPanel.Dock="Bottom" Background="#F0F0F0" Height="25">
+            <StatusBarItem>
+                <TextBlock x:Name="statusText" Text="Pronto"/>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <TextBlock x:Name="charCountText" Text="Caracteres: 0"/>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <TextBlock x:Name="wordCountText" Text="Palavras: 0"/>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem>
+                <TextBlock x:Name="cursorPositionText" Text="Lin: 1, Col: 1"/>
+            </StatusBarItem>
+        </StatusBar>
+        
+        <!-- Área de Abas e Editor -->
+        <TabControl x:Name="tabControl" SelectionChanged="TabControl_SelectionChanged">
+            <TabItem Header="Novo Documento">
+                <ScrollViewer>
+                    <TextBox x:Name="textEditor" 
+                             AcceptsReturn="True" 
+                             AcceptsTab="True"
+                             TextWrapping="Wrap"
+                             VerticalScrollBarVisibility="Auto"
+                             HorizontalScrollBarVisibility="Auto"
+                             FontFamily="Consolas"
+                             FontSize="14"
+                             TextChanged="TextEditor_TextChanged"
+                             SelectionChanged="TextEditor_SelectionChanged"
+                             Margin="5"/>
+                </ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>
