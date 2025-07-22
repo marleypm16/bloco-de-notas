@@ -1,36 +1,25 @@
-Com certeza\! Um bom `README` é essencial para qualquer projeto. Ele serve como um manual de instruções, um portfólio e um guia para outros desenvolvedores.
+# 📝 Bloco de Notas 
 
-Criei um `README.md` completo e profissional para o seu aplicativo de Bloco de Notas, utilizando o formato Markdown. Você pode simplesmente copiar este conteúdo, criar um arquivo chamado `README.md` na pasta principal do seu projeto e colar o texto lá.
-
------
-
-# 📝 Bloco de Notas Avançado
-
-Um editor de texto moderno e rico em funcionalidades, desenvolvido com C\# e WPF no framework .NET. Este projeto vai além de um bloco de notas básico, oferecendo uma interface com abas, salvamento automático, barra de status detalhada e muito mais.
+Um editor de texto , desenvolvido com C\# e WPF no framework .NET. Este projeto vai além de um bloco de notas básico, oferecendo uma interface com abas, salvamento automático, barra de status detalhada e muito mais.
 
 ## 🖼️ Visualização
 
-*(**Nota:** É altamente recomendado que você tire um print da tela do seu aplicativo funcionando e coloque aqui. Uma imagem vale mais que mil palavras\!)*
+<img width="978" height="741" alt="image" src="https://github.com/user-attachments/assets/c190ff52-ceaf-43d7-ae0a-5d546dc8ed8c" />
 
-*Substitua o link acima pelo link da sua própria imagem.*
 
 -----
 
 ## ✨ Funcionalidades
 
-  * **📑 Interface com Múltiplas Abas:** Trabalhe em vários arquivos ao mesmo tempo, cada um em sua própria aba.
-  * **💾 Operações de Arquivo Completas:** Crie, abra, salve e use "Salvar Como" para seus documentos de texto.
-  * **⚙️ Salvamento Automático:** Um timer configurável salva seu trabalho periodicamente para evitar perdas (pode ser ativado/desativado).
-  * **✍️ Edição Padrão:** Funcionalidades de Recortar, Copiar, Colar e Selecionar Tudo.
-  * **🔍 Localizar Texto:** Busque por textos específicos dentro do documento ativo.
-  * **📊 Barra de Status Detalhada:** Informações em tempo real sobre:
+  * **Interface com Múltiplas Abas:** Trabalhe em vários arquivos ao mesmo tempo, cada um em sua própria aba.
+  * **Operações de Arquivo Completas:** Crie, abra, salve e use "Salvar Como" para seus documentos de texto.
+  * **Salvamento Automático**
+  * **Edição Padrão:** Funcionalidades de Recortar, Copiar, Colar e Selecionar Tudo.
+  * **Localizar Texto:** Busque por textos específicos dentro do documento ativo.
+  * **Barra de Status Detalhada:** Informações em tempo real sobre:
       * Contagem de caracteres.
       * Contagem de palavras.
       * Posição atual do cursor (linha e coluna).
-  * **🎨 Realce de Sintaxe Básico:** O texto muda de cor com base na extensão do arquivo (`.xml`, `.json`, `.cs`) para melhor legibilidade.
-  * **✅ Gerenciamento de Estado:** O aplicativo avisa sobre alterações não salvas antes de fechar uma aba ou a janela principal.
-  * **🖼️ Ícone Personalizado:** O aplicativo possui uma identidade visual própria.
-
 -----
 
 ## 🛠️ Tecnologias Utilizadas
@@ -55,10 +44,9 @@ Para compilar e executar este projeto em sua máquina local, siga os passos abai
 1.  **Clone o repositório:**
 
     ```bash
-    git clone [URL_DO_SEU_REPOSITORIO_AQUI]
+    git clone https://github.com/marleypm16/bloco-de-notas
     ```
 
-    *Se não estiver usando Git, apenas baixe os arquivos do projeto.*
 
 2.  **Abra a Solução:**
 
@@ -74,23 +62,8 @@ Para compilar e executar este projeto em sua máquina local, siga os passos abai
 
 -----
 
-## 🤝 Como Contribuir
 
-Contribuições são o que tornam a comunidade de código aberto um lugar incrível para aprender, inspirar e criar. Qualquer contribuição que você fizer será **muito bem-vinda**.
 
-1.  **Faça um Fork** do projeto.
-2.  **Crie uma Branch** para sua feature (`git checkout -b feature/FeatureIncrivel`).
-3.  **Faça o Commit** de suas alterações (`git commit -m 'Adiciona alguma FeatureIncrivel'`).
-4.  **Faça o Push** para a Branch (`git push origin feature/FeatureIncrivel`).
-5.  **Abra um Pull Request**.
-
------
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
------
 
 ## 👤 Autor
 
